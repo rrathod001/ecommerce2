@@ -1,0 +1,1018 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+
+/*   Defaults   */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;
+
+    --white-color: #ffffff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c899a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
+
+
+    --font-small: 13px;
+    --font-smaller: 11px;
+
+
+    --percent100: 100%;
+    --percent50: 50%;
+
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+
+    --trans-background-color: background-color .3s, color .3s;
+    --trans-background: background-color .3s;
+    --trans-background-color: color .3s
+}
+
+body {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    font-size: 16px;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: var(--percent100);
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: var(--fw8);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input::placeholder {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: calc(1.3em + 1vw);
+    font-weight: var(--fw8);
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: var(--fw7);
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: var(--fw6);
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
+/* first navbar styling */
+
+
+header {
+    width: 100vw;
+    /* height: 100%; */
+}
+
+.navigation_bar {
+    padding: 0 14em !important;
+    position: relative;
+}
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbarNavDropdown1 .dropdown-menu {
+
+    margin-left: 1rem !important;
+    width: fit-content;
+    --bs-dropdown-min-width: 5rem !important;
+    z-index: 1025 !important;
+}
+
+/* #navbarNavDropdown1 ul
+{
+    position: relative;
+    right: 0;
+} */
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.icon-text {
+    color: var(--secondary-color) !important;
+    cursor: pointer;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+/* .dropdown:hover ul {
+    display: block !important;
+} */
+
+
+
+
+/*   second navbar styling   */
+
+
+
+
+.second_nav a,
+.icon-text {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: var(--fw6);
+    color: var(--dark-color);
+}
+
+.second_nav .store,
+.side-off .store {
+    font-size: 2.1em;
+    font-weight: var(--fw8);
+    position: relative;
+}
+
+
+.circle {
+    position: absolute;
+    top: -5px;
+    left: -7px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    width: 38px;
+    height: 38px;
+    z-index: -1;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--secondary-color);
+    border-radius: var(--percent50);
+    width: 28px;
+    height: 28px;
+    z-index: 100;
+    opacity: .4;
+
+}
+
+.sports {
+    position: relative;
+}
+
+.new {
+    position: absolute;
+    top: -6px;
+    right: -15px;
+    background-color: var(--primary-color);
+    padding: 0 5px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    /* width: 30px; */
+    /* height: 30px; */
+
+}
+
+.sports:hover .new {
+    color: var(--dark-color);
+}
+
+.right {
+    margin-right: 6rem !important;
+}
+
+
+.second_nav {
+    z-index: 100;
+    position: relative;
+}
+
+.icon-large {
+    position: relative;
+}
+
+.fly-item {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    /* vertical-align:middle; */
+    border-radius: var(--percent50);
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+.cart_total_top {
+    font-size: 13px;
+    margin-top: -18px;
+}
+
+.hamburger span {
+    font-size: 2.2em;
+    display: none;
+    cursor: pointer;
+}
+
+#navbarNavDropdown ul
+{
+    position: absolute;
+    right: 1em;
+}
+
+
+
+
+
+
+/* designing of the mega menu */
+
+
+.mega {
+    position: absolute;
+    left: 0rem;
+    width: 100vw;
+    background-color: var(--light-bg-color);
+    z-index: 1000 !important;
+    border-radius: 5px;
+    font-size: var(--font-small);
+    padding: 0 0 !important;
+}
+
+.mega li a:hover {
+    color: var(--light-text-color);
+}
+
+.view_brand:hover {
+    color: var(--light-text-color);
+}
+
+
+.thumbnail {
+    width: 15em;
+}
+
+.text-content a {
+    margin-top: -6px !important;
+}
+
+.text-content a:hover {
+    color: var(--light-text-color);
+}
+
+
+.text-content {
+    text-align: center;
+    width: 15em;
+    border: 2px solid var(--border-color);
+}
+
+.text-content h4 {
+    text-align: center !important;
+    color: black;
+    font-size: 1.5em;
+    font-weight: var(--fw8);
+}
+
+.text-content button {
+    border-radius: 2em;
+    background-color: var(--primary-color);
+    padding: 0.4em 2.1em;
+    color: white;
+    transition: all 0.8s ease-out;
+    margin-top: 0.5em;
+}
+
+.text-content button:hover {
+    background-color: var(--secondary-dark-color) !important;
+    color: white;
+}
+
+.thumbnail img {
+    width: 100vw;
+    height: 100%;
+}
+
+
+
+/* designing of the nav_main_part which is present below the 2 navbars */
+
+.nav_main span {
+    font-size: 2.2em;
+    cursor: pointer;
+}
+
+.nav_main {
+
+
+    z-index: 1 !important;
+    background-color: var(--secondary-dark-color);
+    width: 100vw !important;
+    margin-left: 0rem !important;
+
+}
+
+.nav_main button {
+
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+
+}
+
+.nav_main .navbar {
+
+    z-index: 1 !important;
+}
+
+.nav_main form {
+
+    position: absolute;
+    right: 14rem;
+}
+
+.nav_main_part {
+    /* width: 286px; */
+    position: relative;
+    top: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    /* margin-top: 1rem; */
+    padding: 0.75em 1.5em;
+    border-radius: 7px 7px 0 0;
+    z-index: 1000;
+
+}
+
+.nav_p_r {
+    position: relative;
+    padding: 0 15em !important;
+}
+
+
+.respon_menu {
+    position: absolute;
+    border: 1px solid var(--border-color);
+    width: 286.85px;
+    top: 5.2rem;
+    z-index: 1;
+    border-top: 0;
+
+}
+
+.respon_menu ul li a {
+    border-bottom: 1px solid var(--border-color);
+    margin-left: -1.6rem !important;
+    cursor: pointer;
+}
+
+.respon_menu ul li a:hover {
+    background-color: var(--light-bg-color);
+}
+
+.respon_menu .span1 {
+    font-size: 1.8em;
+}
+
+.respon_menu .span2 {
+    font-size: 1em;
+    font-weight: var(--fw6);
+}
+
+.respon_menu .span3 {
+    font-size: 1.5em;
+    margin-right: 1.5em;
+    font-weight: var(--fw5);
+}
+
+.respon_menu .menu_list {
+    position: absolute;
+    top: 0;
+    left: var(--percent100);
+    /* left: 10em; */
+    width: var(--percent100);
+    height: 100%;
+    padding: 1.5em;
+    font-size: var(--font-small);
+    line-height: 2.5em;
+    min-height: var(--percent100);
+    border: 1px solid var(--border-color);
+    /* border: 1px solid red; */
+    border-top: 0;
+    z-index: 1000;
+    /* display: none !important; */
+}
+
+.respon_menu .menu_list li a {
+    border-bottom: 0;
+    margin-left: 1em !important;
+}
+
+/* .respon_menu .hover_1:hover + .hover_item_1
+{
+    display: block;  
+} */
+#hover_item_1 {
+    background-image: linear-gradient(to bottom, rgb(233 222 222 / 0%) 0%, rgb(61, 61, 61) 100%), url(/Ecommerce/assets/menu/beauty2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -0.25em !important;
+    opacity: 1;
+
+}
+
+#hover_item_1 li a {
+    z-index: 100 !important;
+    /* color: var(--light-bg-color); */
+    font-size: 1.2em;
+    /* font-size: var(--font-small); */
+    font-weight: var(--fw7) !important;
+    color: white;
+    color: black;
+    padding: 0.6rem;
+    border-radius: 1em;
+}
+
+#hover_item_1 li a:hover {
+    background-color: transparent;
+    color: var(--secondary-dark-color);
+    color: rgb(40, 40, 40);
+}
+
+#hover_item_2 {
+    background-image: linear-gradient(to bottom, rgb(233 222 222 / 0%) 0%, rgb(61, 61, 61) 100%), url(/Ecommerce/assets/menu/menu_bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -0.25em !important;
+    opacity: 1;
+}
+
+#hover_item_2 li a {
+    z-index: 100 !important;
+    font-size: 1.2em;
+    font-weight: var(--fw7) !important;
+    color: white;
+    color: black;
+    padding: 0.6rem;
+}
+
+#hover_item_2 li a:hover {
+    background-color: transparent;
+    color: var(--secondary-dark-color);
+    color: rgb(40, 40, 40);
+}
+
+#hover_item_3 {
+    background-image: linear-gradient(to bottom, rgb(233 222 222 / 0%) 0%, rgb(61, 61, 61) 100%), url(/Ecommerce/assets/menu/menu_bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -0.25em !important;
+    opacity: 1;
+}
+
+#hover_item_3 li a {
+    z-index: 100 !important;
+    font-size: 1.2em;
+    font-weight: var(--fw7) !important;
+    color: white;
+    color: black;
+    padding: 0.6rem;
+}
+
+#hover_item_3 li a:hover {
+    background-color: transparent;
+    color: var(--secondary-dark-color);
+    color: rgb(40, 40, 40);
+}
+
+.hover_item_4_class {
+    display: none !important;
+}
+
+#hover_item_4 {
+    width: max-content !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    /* align-items: center !important; */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(189, 188, 188) 100%), url(/Ecommerce/assets/menu/menu_bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    margin-top: -0.25em !important;
+    opacity: 1;
+    /* display: none !important; */
+}
+
+#hover_item_4 li a {
+    z-index: 100 !important;
+    font-size: 1.2em;
+    font-size: var(--font-small);
+    font-weight: var(--fw6) !important;
+    /* font-weight: 549 !important; */
+    /* color: white; */
+    color: rgb(0, 0, 0);
+    padding: 0.6rem;
+}
+
+#hover_item_4 ul h4 {
+    font-weight: var(--fw8) !important;
+    font-size: 1.3em;
+    margin-left: 1em;
+    color: rgb(59, 17, 17);
+}
+
+#hover_item_4 li a:hover {
+    background-color: transparent;
+    color: yellow;
+    color: rgb(47, 44, 44);
+}
+
+/* Desigining of the aside hamburger menu */
+
+aside {
+
+    display: none;
+    /* position: absolute; */
+    position: fixed;
+    top: -0.9em;
+    left: -300px;
+    left: -100%;
+    width: 300px;
+    z-index: 1000;
+    background-color: rgb(206, 206, 206);
+    background-color: var(--light-bg-color);
+    height: 100%;
+    transition: left 0.3s ease;
+    /* display: none !important; */
+    overflow-y: auto !important;
+    /* background-color: black; */
+    overflow-x: hidden;
+
+}
+
+.side-off {
+    left: 0px;
+
+}
+
+aside menu {
+
+    /* position: fixed; */
+    width: 300px;
+    height: var(--percent100);
+    /* overflow-y: auto; */
+    font-size: var(--font-small);
+    background-color: rgb(206, 206, 206);
+    background-color: var(--light-bg-color);
+    /* overflow-x: hidden; */
+
+}
+
+.canvas-head {
+    background-color: var(--secondary-dark-color);
+    border-bottom-right-radius: 160px 25px;
+    color: white;
+}
+
+.m_logo span {
+    z-index: 10;
+    opacity: 0.75;
+}
+
+.m_logo a {
+    color: white !important;
+}
+
+.m_logo .m_close {
+    position: absolute;
+    right: 1.4em;
+    top: 1.5em;
+    font-size: 1.2em;
+    color: white;
+    transition: var(--trans-background-color);
+    width: 32px;
+    height: 32px;
+    border-radius: var(--percent50);
+    background-color: var(--secondary-dark-color);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m_logo .m_close:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-dark-color);
+    /* color: var(--light-text-color);
+   color: rgb(179, 179, 179); */
+    opacity: .75;
+}
+
+menu .span1 {
+    font-size: 1.3em;
+}
+
+menu .span2 {
+    font-size: 1.3em;
+}
+
+.menu_content_1 .text-1 {
+    background-color: white;
+    border-radius: 7px 7px 0 0;
+}
+
+.menu_content_1 {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.menu_content_2 {
+    margin-top: -2em;
+    border-bottom: 3px solid var(--border-color);
+}
+
+.menu_content_2 .w_menu {
+    margin-left: -2.4em;
+}
+
+menu .span3 {
+    font-weight: var(--fw5);
+    font-size: 1.1em;
+}
+
+menu .menu_item li a:hover {
+    color: var(--light-text-color);
+}
+
+menu .heading:hover {
+    color: #794afa;
+}
+
+.menu_sports {
+    left: -1.7em;
+    position: relative;
+}
+
+.menu_new {
+    position: absolute;
+    top: -8px;
+    /* right: -15px; */
+    left: 4em;
+    background-color: var(--primary-color);
+    padding: 0 5px;
+    border-radius: 3px;
+    font-size: 0.56rem;
+}
+
+.menu_sports:hover .menu_new {
+    color: var(--dark-color);
+}
+
+
+
+/* designing of the main content */
+
+main {
+    width: 88%;
+    padding: 1em 13em;
+    padding-left: 25em;
+    margin-left: auto;
+
+}
+
+.carousel-inner-zin {
+    z-index: -1;
+}
+.carousel-inner-zin + .carousel-indicators {
+    z-index: -1;
+}
+
+
+.carousel-item img {
+    object-fit: cover;
+    height: 60vh !important;
+}
+
+.carousel-indicators {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+   
+}
+
+.carousel-indicators li {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.slider_text {
+    position: absolute;
+    height: var(--percent100);
+    justify-content: flex-end;
+    padding: 0 0 10% 10%;
+    /* z-index: 1025; */
+    /* bottom: 13em; */
+    top: 40%;
+    z-index: 2;
+}
+.carousel-item::before {
+    content: " ";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 450px;
+    height: 300px;
+    background-color: var(--white-color);
+    z-index: 1;
+    filter: blur(50px);
+    opacity: .8;
+   
+}
+
+.slider_text h6 button {
+    border-radius: 2em;
+    background-color: var(--primary-color);
+    padding: 0.4em 1em;
+    color: white;
+    transition: all 1s ease-out;
+    border: 1px solid var(--primary-color);
+ 
+}
+
+
+.slider_text h6 button:hover {
+    background-color: var(--secondary-dark-color);
+    color: white;
+    border: 1px solid var(--secondary-dark-color);
+}
+
+.slider_text h4 {
+    font-size: var(--font-small);
+    font-weight: var(--fw7);
+    width: fit-content;
+    padding: 4px 10px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 4px;
+}
+
+.slider_text :where(h2, h3) span:first-child {
+    font-weight: var(--fw3);
+    columns: var(--light-text-color);
+}
+
+.slider_text :where(h2, h3) span:last-child {
+    color: var(--secondary-dark-color);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: var(--fw8);
+}
+
+
+
+
+
+
+
+
+
+/*  Media Queries  */
+@media screen and (min-width:2000px) {
+
+    main {
+
+        padding: 1em 13em;
+        padding-left: 25em !important;
+
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .navigation_bar {
+        padding: 0 20em !important;
+    }
+
+    .nav_p_r {
+        padding: 0 20em !important;
+    }
+
+    /* .nav_2 {
+        margin-left: 20em !important;
+    } */
+
+    .nav_main form {
+
+        position: absolute;
+        right: 19rem;
+    }
+
+    main {
+
+        padding: 1em 13em;
+        padding-left: 29em;
+
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .navigation_bar {
+        padding: 0 0 !important;
+    }
+
+    .nav_main {
+        padding: 0 0 !important;
+    }
+
+    .nav_p_r {
+        padding: 0 2em !important;
+    }
+
+    main {
+        padding: 1em 3em;
+        padding-left: 15em;
+
+    }
+    .nav_main form {
+
+        position: absolute;
+        right: 1rem;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    .navigation_bar {
+        padding: 0 1em !important;
+    }
+
+    /* .second_nav {
+        border-bottom: 1px solid var(--border-color);
+    } */
+    header {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .hamburger span {
+        margin-top: -4px;
+        display: block;
+    }
+
+    .mob-hide {
+        display: none;
+    }
+
+    .second_nav {
+        margin-top: -1.3rem !important;
+    }
+
+    .cart_total_top {
+        margin-top: -12px;
+    }
+
+    .iscart {
+        /* margin-right: -40px; */
+    }
+
+    .nav_p_r {
+        padding: 0 0 !important;
+    }
+
+    aside {
+        display: block;
+    }
+
+    .nav_main {
+        display: none;
+    }
+
+    /* main {
+      width: 100vw;
+      padding: 0 0 !important;
+
+    }
+    .carousel-item img {
+        object-fit: fill;
+        width: 100% !important;
+        height: 100vh !important;
+     
+    } */
+
+
+    main {
+        width: 100vw !important;
+        /* height: 100vh !important; */
+        padding: 1em 0.7em !important;
+        /* margin-left: 1em; */
+        /* margin-right: -1em; */
+       
+    }
+    
+    .carousel-item img {
+        object-fit: cover !important;
+        width: 100% !important;
+        height: 80vh !important;
+    }
+    /* bhh */
+
+
+
+    
+    
+    
+
+}
+
+@media screen and (max-width:420px) {
+
+    aside {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+    aside menu {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+}
