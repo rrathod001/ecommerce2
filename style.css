@@ -923,7 +923,7 @@ main {
 
 @media screen and (max-width:992px) {
     .navigation_bar {
-        padding: 0 1em !important;
+        padding: 0 0em !important;
     }
 
     /* .second_nav {
