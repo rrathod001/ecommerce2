@@ -1225,11 +1225,10 @@ main .slide {
 
 }
 
-.column_2 .item_content .main-links {
-    /* white-space:normal;
-        overflow: hidden;
-        text-overflow: ellipsis; */
-}
+
+
+
+/* designing of the featured product */
 
 .Featured_materials {
     padding: 0 16em !important;
@@ -1245,6 +1244,63 @@ main .slide {
     object-fit: cover !important;
     width: 100%;
     height: 100%;
+}
+
+
+/* desigining of the brand_beauty_products */
+.brand_beauty_products {
+    padding: 0 16em;
+}
+
+.bbp_img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5em;
+
+}
+
+.bbp_img .img1 {
+    max-width: 150px !important;
+    max-height: 200px;
+}
+
+.bbp_img ul {
+    font-size: var(--font-small);
+    /* margin-top: 2em; */
+    color: var(--light-text-color);
+
+}
+
+.bbp_img ul li {
+    margin-top: 1em;
+    /* text-align: start; */
+}
+
+.bbp_items h4 {
+    /* text-align: center; */
+    margin-left: -1em;
+}
+
+.bbp_items div {
+    /* text-align: end; */
+    margin-left: -1em;
+}
+
+.bbp_items {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1em;
+}
+
+.bbp {
+    border: 2px solid var(--light-bg-color);
+    /* max-width: 340px; */
+    /* margin-left: 1.5em; */
+
 }
 
 
@@ -1378,6 +1434,10 @@ main .slide {
         padding: 0 2em !important;
     }
 
+    .brand_beauty_products {
+        padding: 0 2em;
+    }
+
 }
 
 @media screen and (max-width:992px) {
@@ -1481,6 +1541,9 @@ main .slide {
     .Featured_materials {
         padding: 0 1em !important;
     }
+    .brand_beauty_products {
+        padding: 0 1em;
+    }
 
 
 }
@@ -1511,6 +1574,7 @@ main .slide {
     .trend {
         margin-left: 0.4em !important;
     }
+
     .Featured_materials .trend {
         margin-left: 0em !important;
     }
@@ -1519,10 +1583,11 @@ main .slide {
 @media screen and (max-width:576px) {
 
     .Featured_materials .item1_img .img1 img {
-        object-fit:fill !important;
+        object-fit: fill !important;
     }
 }
-/* updated CSS */
+
+/* updated CSS again*/
 
 @media screen and (max-width:300px) {
 
@@ -1534,7 +1599,8 @@ main .slide {
         width: 100%;
     }
 
- 
+
 
 }
+
 /* updated CSS */
