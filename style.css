@@ -60,7 +60,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    /* overflow: hidden; */
 }
 
 a {
@@ -122,6 +123,7 @@ h5 {
 }
 
 /* first navbar styling */
+
 
 
 header {
@@ -394,6 +396,12 @@ nav {
     right: 14rem;
 }
 
+.nav_main form input {
+
+    padding-right: 6em !important;
+    padding-left: 1em !important;
+}
+
 .nav_main_part {
     /* width: 286px; */
     position: relative;
@@ -594,6 +602,14 @@ nav {
 }
 
 /* Desigining of the aside hamburger menu */
+
+/* I have fixed the hamburger menu */
+.off-canvas {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1025 !important;
+}
 
 aside {
 
@@ -1246,64 +1262,147 @@ main .slide {
     height: 100%;
 }
 
+.Featured_materials .column_1 {
+    /* border: 2px solid black; */
+}
+
 
 /* desigining of the brand_beauty_products */
 .brand_beauty_products {
-    padding: 0 16em;
+    padding: 0 16em !important;
 }
 
 .bbp_img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 1.5em;
+    padding: 1em 1.5em;
 
 }
 
-.bbp_img .img1 {
-    max-width: 150px !important;
+.bbp_img .img1 img {
+    /* max-width: 400px !important; */
     max-height: 200px;
+}
+
+.bord {
+    /* width: 300px; */
 }
 
 .bbp_img ul {
     font-size: var(--font-small);
-    /* margin-top: 2em; */
     color: var(--light-text-color);
+    margin-left: -2.5em;
+
 
 }
 
 .bbp_img ul li {
     margin-top: 1em;
-    /* text-align: start; */
 }
 
-.bbp_items h4 {
-    /* text-align: center; */
-    margin-left: -1em;
+.bbp_img ul li:hover {
+    color: var(--secondary-dark-color);
 }
 
-.bbp_items div {
-    /* text-align: end; */
-    margin-left: -1em;
-}
 
 .bbp_items {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: -1em;
+    align-items: start;
+    justify-content: start;
+    /* margin-left: -1em; */
+    /* border: 2px solid rebeccapurple; */
+    /* text-align: center; */
 }
 
 .bbp {
-    border: 2px solid var(--light-bg-color);
-    /* max-width: 340px; */
-    /* margin-left: 1.5em; */
+    /* border: 2px solid red; */
 
 }
 
+.bord {
+    /* border: 2px solid black; */
+    border: 2px solid var(--border-color);
 
+}
+
+.view_all {
+    font-size: 0.8em;
+}
+
+.view_all:hover {
+    color: var(--secondary-color);
+}
+
+.view_all span {
+    font-size: var(--font-small);
+}
+
+/* designing of the footer */
+
+.foot_search {
+    margin-top: 3em;
+    padding: 2.5em 15em;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    overflow-x: hidden;
+}
+
+.foot_search strong {
+    color: var(--primary-color);
+}
+
+.foot_form input {
+    /* padding: 0 2em; */
+    padding-right: 6em;
+}
+
+/* ::placeholder
+{
+   
+
+} */
+.foot_form button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.foot_form button:hover {
+    background-color: var(--secondary-dark-color);
+    background-color: green;
+}
+
+.foot_menu {
+    padding: 3em 14em;
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+.foot_menu h4 {
+    margin-left: 2em;
+}
+
+/* .foot_menu .col-3
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: start;
+} */
+.foot_menu ul {
+    font-size: var(--font-small);
+}
+
+.foot_menu ul li a:hover {
+    color: var(--light-text-color);
+}
+
+.foot_search .container-fluid {
+    /* display: flex;
+    flex-wrap:; */
+}
 
 
 
@@ -1405,6 +1504,18 @@ main .slide {
     .trending_materials {
         padding: 0 5em !important;
     }
+
+    .brand_beauty_products .row {
+        padding: 0 1em !important;
+    }
+
+    .foot_search {
+        padding: 3em 5em !important;
+    }
+
+    .foot_menu {
+        padding: 3em 5em !important;
+    }
 }
 
 
@@ -1423,6 +1534,18 @@ main .slide {
         max-width: 300px;
         margin: 0 1em;
     }
+
+    .brand_beauty_products .row {
+        padding: 0 0em !important;
+    }
+
+    .foot_search {
+        padding: 3em 2em !important;
+    }
+
+    .foot_menu {
+        padding: 3em 2em !important;
+    }
 }
 
 @media screen and (max-width:1100px) {
@@ -1436,6 +1559,10 @@ main .slide {
 
     .brand_beauty_products {
         padding: 0 2em;
+    }
+
+    .brand_beauty_products .row {
+        padding: 0 2em !important;
     }
 
 }
@@ -1541,10 +1668,28 @@ main .slide {
     .Featured_materials {
         padding: 0 1em !important;
     }
+
     .brand_beauty_products {
         padding: 0 1em;
     }
 
+    .brand_beauty_products .row {
+        padding: 0 1em !important;
+    }
+
+    .foot_search {
+        padding: 3em 1em !important;
+    }
+
+    .foot_menu {
+        padding: 3em 1em !important;
+    }
+
+    /* .second_nav {
+        position: sticky !important;
+        top: 1em !important;
+        left: 0 !important;
+    } */
 
 }
 
@@ -1578,12 +1723,30 @@ main .slide {
     .Featured_materials .trend {
         margin-left: 0em !important;
     }
+
+    .foot_search {
+        padding: 3em 0em !important;
+    }
+
+    .foot_menu {
+        padding: 3em 0em !important;
+    }
+
+    .foot_form input {
+        padding-right: 1em;
+    }
 }
 
 @media screen and (max-width:576px) {
 
     .Featured_materials .item1_img .img1 img {
         object-fit: fill !important;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .foot_form input {
+        padding-right: 0em;
     }
 }
 
