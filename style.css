@@ -764,7 +764,7 @@ menu .heading:hover {
 main .slide {
     width: 88%;
     padding: 1em 13em;
-    padding-left: 25em;
+    padding-left: 23.5em;
     margin-left: auto;
 
 }
@@ -1630,8 +1630,8 @@ main .slide {
     }
 
     .carousel-indicators {
-        margin-left: 0 !important;
-        margin-right: 2em;
+        margin-left: auto !important;
+        margin-right: 0em;
     }
 
     .trending_materials {
