@@ -1845,7 +1845,7 @@ main .slide {
     } */
 
     .menu_bottom {
-        padding: 0 1em;
+        padding: 0 1.8em !important;
         margin-left: -1.7em;
     }
 
@@ -1893,6 +1893,8 @@ main .slide {
     .foot_form input {
         padding-right: 1em;
     }
+
+    
 }
 
 @media screen and (max-width:576px) {
@@ -1907,6 +1909,10 @@ main .slide {
         padding: 0 1em;
         margin-left: -2em !important;
     }
+
+    /* .menu_line {
+        justify-content: space-evenly;
+    } */
 }
 @media screen and (max-width:340px) {
     .foot_form input {
